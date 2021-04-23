@@ -1,0 +1,51 @@
+﻿<Window x:Class="AsyncExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncExample"
+        mc:Ignorable="d"
+        FontSize="18"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="4"
+                   FontSize ="28">
+            Sync vs Async
+        </TextBlock>
+        <Button x:Name="btnSync"
+                Grid.Row="2"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Margin="10"
+                Padding="10"
+                Content="Sync Excution" Click="btnSync_Click"/>
+        <Button x:Name="btnAsync"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Margin="10"
+                Padding="10"
+                Content="Async Excution (Not Effect!)" Click="btnAsync_Click"/>
+        <Button x:Name="btnParalleAsync"
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Margin="10"
+                Padding="10"
+                Content="Async Excution (Good!)" Click="btnParalleAsync_Click"/>
+        <TextBlock x:Name="tbkMessage"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="4" />
+    </Grid>
+</Window>
